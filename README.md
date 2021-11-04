@@ -16,5 +16,5 @@
 8. Go to Netlify and click on `New Site From Git` button.
 9. Follow steps to Authorize Netlify access and select your Repo.
 10. Select the `build` folder as the production folder.
-11. With each local change to your project: `yarn build`, `git add`, `git commit`, and `git push` to Github
+11. With each local change to your project: `git add`, `git commit`, and `git push` to Github
 12. Profit
