@@ -39,3 +39,9 @@ code {
   font-weight: 300;
   border: none;
 }
+.cancel {
+  background-color: #ddd;
+  color: #222;
+  font-weight: 300;
+  border: none;
+}
