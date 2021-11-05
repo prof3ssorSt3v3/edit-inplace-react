@@ -29,7 +29,9 @@ export default function List({ data, updateData }) {
   function clearEdit(ev) {
     ev.preventDefault();
     //set the currently selected id back to nothing
+    //this could be for the cancel button
     setColorId('');
+    //if there is a cancel button then our submit button would do the update of state
   }
 
   const Items = data.map((item) => {
