@@ -3,12 +3,15 @@ import EditItem from './EditItem';
 import { useState } from 'react';
 
 export default function List({ data, updateData }) {
-  //the list will hold the data in state
+  //the list {data} holds the data in state in App.js
+  //the colorId is the id of the currently selected item for editing
+  //empty string is the value if NOTHING is selected for editing
   const [colorId, setColorId] = useState('');
 
   function editClick(ev) {
     ev.preventDefault();
     console.log('clicked edit');
+    //save the id of the item whose edit button was clicked
     setColorId(ev.target.getAttribute('data-id'));
   }
   function saveClick(ev) {
@@ -18,11 +21,14 @@ export default function List({ data, updateData }) {
       id: ev.target.getAttribute('data-id'),
       title: ev.target.value,
     };
+    //pass the new data back up to App.js to merge with the state list
     updateData(obj);
+    //the method to update state has to be in the component that holds the state variable
   }
 
   function clearEdit(ev) {
     ev.preventDefault();
+    //set the currently selected id back to nothing
     setColorId('');
   }
 

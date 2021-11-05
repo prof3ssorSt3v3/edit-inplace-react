@@ -3,6 +3,7 @@ import { data } from './data';
 import { useState } from 'react';
 
 function App() {
+  //colors is the list of data from ./data.js (could be from an api or localStorage)
   const [colors, setColors] = useState(data);
 
   function updateData(obj) {
